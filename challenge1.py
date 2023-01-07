@@ -1,23 +1,22 @@
 #  Card Mask code challenge
 
-str = "1234567891234567"
+str1 = "1234567891234567"
 # First solution
-string_length = len(str)
+string_length = len(str1)
 print(string_length)
 mask = string_length - 4
 print(mask)
-showstr = str[mask:]
+showstr = str1[mask:]
 print(showstr)
 
-print("Original String: " + str)
+print("Original String: " + str1)
 print("Masked String: " + "*" * mask + showstr)
 
 
 # second solution
 def masking(card_number):
-    return str(card_number)[-4:].rjust(len(card_number), '*')
+    return str(card_number)[-4:].rjust(len(str(card_number)), '*')
 
 print(masking("1234567891234567"))
-
 
 
