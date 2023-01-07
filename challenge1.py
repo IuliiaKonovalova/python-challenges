@@ -15,7 +15,7 @@ print("Masked String: " + "*" * mask + showstr)
 
 # second solution
 def masking(card_number):
-    return str(card_number)[-4:].rjust(len(str(card_number)), '*')
+    return str(card_number[-4:]).rjust(len(str(card_number)), "*")
 
 print(masking("1234567891234567"))
 
