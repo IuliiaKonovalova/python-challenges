@@ -1,3 +1,4 @@
+import unittest
 #  Card Mask code challenge
 
 str1 = "1234567891234567"
@@ -19,4 +20,10 @@ def masking(card_number):
 
 print(masking("1234567891234567"))
 
+class TestMaskCardTest(unittest.TestCase):
+    def test_mask_card(self):
+        self.assertEqual(masking("1234567891234567"), "************4567")
 
+
+if __name__ == '__main__':
+    unittest.main()
