@@ -4,9 +4,11 @@ import itertools
 nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9], ['a', 'b', 'c']]
 
 def flatten_list(nested_list):
-    flatted_list = []
-    [flatted_list.extend(i) for i in nested_list]
-    return flatted_list
+    # flatted_list = []
+    # [flatted_list.extend(i) for i in nested_list]
+    # return flatted_list
+    return [i for j in nested_list for i in j]
+
 
 print(flatten_list(nested_list))
 
