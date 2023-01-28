@@ -79,7 +79,20 @@ class Solution(object):
         return result
 
 
-
+class TestSolution(unittest.TestCase):
+    def test_romanToInt(self):
+        solution = Solution()
+        self.assertEqual(solution.romanToInt("III"), 3)
+        self.assertEqual(solution.romanToInt("IV"), 4)
+        self.assertEqual(solution.romanToInt("IX"), 9)
+        self.assertEqual(solution.romanToInt("LVIII"), 58)
+        self.assertEqual(solution.romanToInt("MCMXCIV"), 1994)
+        self.assertEqual(solution.romanToInt("MMXIII"), 2013)
+        self.assertEqual(solution.romanToInt("MCMXCVI"), 1996)
+        self.assertEqual(solution.romanToInt("MCMXCVII"), 1997)
+        self.assertEqual(solution.romanToInt("MCMXCVIII"), 1998)
+        self.assertEqual(solution.romanToInt("MCMXCIX"), 1999)
+        self.assertEqual(solution.romanToInt("MM"), 2000)
 
 if __name__ == '__main__':
   unittest.main()
